@@ -1,8 +1,8 @@
 <template>
 
   <section id="team">
-    <div class="container">
-      <h1 class="section-title">OUR TEAM</h1>
+    <v-main class="container">
+      <h1 class="section-title">our team</h1>
       <v-row>
 
         <!-- Team member -->
@@ -14,11 +14,11 @@
                 <v-card class="card-body text-center">
                   <img class="img-fluid" :src="front.img" alt="card image">
                   <v-card-subtitle class="green--text">Sunlimetech</v-card-subtitle>
-                  <v-card-text class="text--primary">This is basic card with image on top, title, description and button.
+                  <v-card-text class="black--text">This is basic card with image on top, title, description and button.
                   </v-card-text>
                   <v-card-actions>
                     <v-spacer></v-spacer>
-                    <v-btn text href="https://www.fiverr.com/share/qb8D02" class="btn btn-primary"><i
+                    <v-btn text href="https://www.fiverr.com/share/qb8D02" class="fontbtn"><i
                       class="fa fa-plus"></i></v-btn>
                     <v-spacer></v-spacer>
                   </v-card-actions>
@@ -28,13 +28,13 @@
               <div class="backside">
                 <v-card class="card-body text-center">
                   <v-card-subtitle class="green--text back">Sunlimetech</v-card-subtitle>
-                  <v-card-text class="text--primary text">This is basic card with image on top, title, description and
+                  <v-card-text class="black--text" >This is basic card with image on top, title, description and
                     button.This is basic card with image on top, title, description and button.This is basic card with
                     image on top, title, description and button.
                   </v-card-text>
                   <v-card-actions>
                     <v-spacer></v-spacer>
-                    <v-btn text class="btn-primary btn-sm" v-for="social in socialLinks" target="_blank"
+                    <v-btn text class="btn-primary btn-ms" v-for="social in socialLinks" target="_blank"
                            href="https://www.fiverr.com/share/qb8D02"><i :class="social.link"></i></v-btn>
                     <v-spacer></v-spacer>
                   </v-card-actions>
@@ -44,7 +44,7 @@
           </div>
         </v-col>
       </v-row>
-    </div>
+    </v-main>
   </section>
 
 </template>
@@ -53,7 +53,11 @@
 
     export default {
         data: () => ({
-            socialLinks: [{link: 'fa fa-facebook'}, {link: 'fa fa-twitter'}, {link: 'fa fa-skype'}, {link: 'fa fa-google'}],
+            socialLinks: [
+                {link: 'fa fa-facebook'},
+                {link: 'fa fa-twitter'},
+                {link: 'fa fa-skype'},
+                {link: 'fa fa-google'}],
             frontSide: [
                 {img: 'https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_01.png'},
                 {img: 'https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_02.png'},
@@ -69,19 +73,15 @@
 
 <style scoped>
 
-
   @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
   .back {
-    padding-top: 20px;
-  }
-
-  .text {
-    padding-top: 20px;
+    padding-top: 40px;
   }
 
   .card-body {
-    height: 300px;
+    background-color: #eeeeee;
+    height: 310px;
     width: 400px;
     padding-left: 20px;
     padding-right: 20px;
@@ -89,14 +89,18 @@
   }
 
   #team {
-    background: darkgrey !important;
-    padding-left: 140px;
-    padding-right: 140px;
+    background: lightgrey !important;
+    padding-left: 210px;
+    padding-right: 210px;
+  }
+
+  .fontbtn {
+    color: #eeeeee;
+    background-color: blue;
   }
 
   .btn-primary {
-    color: #007b5e;
-
+    color: green;
   }
 
   section {
@@ -106,14 +110,14 @@
 
   section .section-title {
     text-align: center;
-    color: #007b5e;
+    color: green;
     margin-bottom: 50px;
     text-transform: uppercase;
   }
 
-  #team v-card {
+  #team {
     border: none;
-    background: #ffffff;
+    background: #eeeeee;
   }
 
   .image-flip:hover .backside,
@@ -159,7 +163,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    background: white;
+    background: #eeeeee;
     -webkit-transform: rotateY(-180deg);
     -moz-transform: rotateY(-180deg);
     -o-transform: rotateY(-180deg);
