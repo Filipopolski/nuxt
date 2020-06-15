@@ -31,7 +31,7 @@
                   <v-card-actions>
                     <v-spacer></v-spacer>
                     <v-btn text class="btn-primary btn-ms" v-for="social in socialLinks" target="_blank"
-                           href="https://www.fiverr.com/share/qb8D02"><i :class="social.icon"></i></v-btn>
+                           href="https://www.fiverr.com/share/qb8D02"><i :class="social"></i></v-btn>
                     <v-spacer></v-spacer>
                   </v-card-actions>
                 </v-card>
@@ -52,11 +52,7 @@
             cardTitle: 'Sunlimetech',
             cardTextFront: 'This is basic card with image on top, title, description and button.',
             cardTextBack: 'This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.',
-            socialLinks: [
-                {icon: 'fa fa-facebook'},
-                {icon: 'fa fa-twitter'},
-                {icon: 'fa fa-skype'},
-                {icon: 'fa fa-google'}],
+            socialLinks: ['fa fa-facebook', 'fa fa-twitter', 'fa fa-skype', 'fa fa-google'],
             frontSide: [
                 {img: 'https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_01.png'},
                 {img: 'https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_02.png'},
