@@ -13,12 +13,11 @@
               <div class="frontside">
                 <v-card class="card-body text-center">
                   <img class="img-fluid" :src="front.img" alt="card image">
-                  <v-card-subtitle class="green--text">Sunlimetech</v-card-subtitle>
-                  <v-card-text class="black--text">This is basic card with image on top, title, description and button.
-                  </v-card-text>
+                  <v-card-title class="green--text justify-center">{{ cardTitle }}</v-card-title>
+                  <v-card-text class="black--text">{{ cardTextFront }}</v-card-text>
                   <v-card-actions>
                     <v-spacer></v-spacer>
-                    <v-btn text href="https://www.fiverr.com/share/qb8D02" class="fontbtn"><i
+                    <v-btn text href="https://www.fiverr.com/share/qb8D02" class="frontbtn"><i
                       class="fa fa-plus"></i></v-btn>
                     <v-spacer></v-spacer>
                   </v-card-actions>
@@ -27,15 +26,12 @@
 
               <div class="backside">
                 <v-card class="card-body text-center">
-                  <v-card-subtitle class="green--text back">Sunlimetech</v-card-subtitle>
-                  <v-card-text class="black--text" >This is basic card with image on top, title, description and
-                    button.This is basic card with image on top, title, description and button.This is basic card with
-                    image on top, title, description and button.
-                  </v-card-text>
+                  <v-card-title class="green--text justify-center back">{{ cardTitle }}</v-card-title>
+                  <v-card-text class="black--text">{{ cardTextBack }}</v-card-text>
                   <v-card-actions>
                     <v-spacer></v-spacer>
                     <v-btn text class="btn-primary btn-ms" v-for="social in socialLinks" target="_blank"
-                           href="https://www.fiverr.com/share/qb8D02"><i :class="social.link"></i></v-btn>
+                           href="https://www.fiverr.com/share/qb8D02"><i :class="social.icon"></i></v-btn>
                     <v-spacer></v-spacer>
                   </v-card-actions>
                 </v-card>
@@ -53,11 +49,14 @@
 
     export default {
         data: () => ({
+            cardTitle: 'Sunlimetech',
+            cardTextFront: 'This is basic card with image on top, title, description and button.',
+            cardTextBack: 'This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.',
             socialLinks: [
-                {link: 'fa fa-facebook'},
-                {link: 'fa fa-twitter'},
-                {link: 'fa fa-skype'},
-                {link: 'fa fa-google'}],
+                {icon: 'fa fa-facebook'},
+                {icon: 'fa fa-twitter'},
+                {icon: 'fa fa-skype'},
+                {icon: 'fa fa-google'}],
             frontSide: [
                 {img: 'https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_01.png'},
                 {img: 'https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_02.png'},
@@ -94,9 +93,9 @@
     padding-right: 210px;
   }
 
-  .fontbtn {
+  .frontbtn {
     color: #eeeeee;
-    background-color: blue;
+    background-color: dodgerblue;
   }
 
   .btn-primary {
